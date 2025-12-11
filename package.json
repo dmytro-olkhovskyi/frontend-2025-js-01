@@ -4,7 +4,9 @@
   "description": "",
   "main": "js/scripts.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build"
   },
   "repository": {
     "type": "git",
@@ -17,6 +19,7 @@
   },
   "homepage": "https://github.com/dmytro-olkhovskyi/frontend-2025-js-01#readme",
   "dependencies": {
-    "swiper": "^12.0.3"
+    "swiper": "^12.0.3",
+    "vite": "^7.2.7"
   }
 }
