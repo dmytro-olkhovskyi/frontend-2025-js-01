@@ -1,7 +1,10 @@
 // import Swiper JS
-//import Swiper from 'swiper';
+import Swiper from 'swiper';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 // import Swiper styles
-//import 'swiper/css';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 import generateColors from "./utils/generate.js"
 
@@ -38,4 +41,31 @@ clearBtn.addEventListener("click", () => {
     localStorage.removeItem("last-color");
 });
 
-generateColors(colorsDiv, 30);
+// generateColors(colorsDiv, 30);
+
+const swiper = new Swiper('.images-slider', {
+  modules: [Navigation, Pagination, Autoplay],
+
+  // Optional parameters
+  loop: true,
+
+  autoplay: {
+    delay: 2500,
+  },
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+//   scrollbar: {
+//     el: '.swiper-scrollbar',
+//   },
+});
